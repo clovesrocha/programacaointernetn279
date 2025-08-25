@@ -1,1 +1,13 @@
-
+ <html lang="pt-br"> 
+  <head> <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Minha Primeira Página Web na UNIVERSO RECIFE</title> 
+  </head> 
+  <body> 
+    <h1>AURORA PET</h1>
+    <img src="https://drive.google.com/file/d/1-NuExghEvwL-XQIIUh2cO7CbTKfriXLf/view?usp=sharing">
+    <p>Bem-vindo ao site, onde conectamos você com os animais</p> 
+    <p>Preparado para encontrar seu pet?</p> 
+    <a href="https://www.w3schools.com/html/" target="_blank">Aprenda mais sobre HTML</a> 
+  </body> 
+</html>
