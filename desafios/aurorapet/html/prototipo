@@ -1,14 +1,117 @@
-  <html lang="pt-br"> 
-  <head> <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Minha Primeira Página Web na UNIVERSO RECIFE</title> 
-  </head> 
-  <body> 
-    <img src="https://github.com/clovesrocha/programacaointernetn279/blob/main/desafios/aurorapet/Capturar-Photoroom.png?raw=true">
-    <h1>Bem-vindo ao site Aurora Pet!</h1>
-    <h2>Preparado para encontrá-lo?</h2>
-    <p>Como a adoção pode melhorar a saúde</p>
-    <a href="https://www.ufpb.br/animaiscomunitariosufpb/a-presenca-de-animais-em-terapias-e-como-isso-melhora-a-saude-humana" 
-target="_blank">Aprenda mais aqui</a> 
-  </body> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aurora Pet</h1>
+        <nav>
+            <ul>
+                <li data-tab="home" class="active">Home</li>
+                <li data-tab="entrar">Entrar</li>
+                <li data-tab="sobre">Sobre</li>
+                <li data-tab="doacoes">Doações</li>
+                <li data-tab="razao">Razão Social</li>
+                <li data-tab="inscricao">Inscrição de Pets</li>
+                <li data-tab="adocoes">Adoções</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <h2>Bem-vindo ao Aurora Pet</h2>
+            <p>Conectando lares e corações aos pets que precisam de amor ❤️</p>
+        </section>
+
+        <section id="entrar" class="tab-content">
+            <h2>Entrar</h2>
+            <p>Área de login em breve.</p>
+        </section>
+
+        <section id="sobre" class="tab-content">
+            <h2>Sobre</h2>
+            <p>O Aurora Pet é um projeto dedicado a facilitar a adoção responsável de animais.</p>
+            <p>Nossa missão é conectar pets necessitados com lares amorosos e permanentes. Acreditamos que cada animal merece uma segunda chance e uma família que o valorize.</p>
+            <h3>Benefícios da Adoção</h3>
+            <p>A adoção de um pet pode trazer grandes benefícios à saúde mental. [cite_start]Um estudo do Human-Animal Bond Research Institute (HABRI) mostrou que 74% dos tutores de animais relataram melhorias em sua saúde mental após a adoção[cite: 15, 57]. [cite_start]A interação com um pet pode ajudar a reduzir o estresse e a ansiedade, além de diminuir a solidão[cite: 58].</p>
+            [cite_start]<p>Além disso, o termo "adoção" também pode se referir à adoção de uma criança, o que, embora positivo, pode apresentar desafios à saúde mental dos pais[cite: 24, 62]. [cite_start]No entanto, a adoção de animais não deve ser vista como uma cura única para a depressão, mas sim como um complemento valioso ao tratamento médico e psicológico. [cite: 24, 62]</p>
+        </section>
+
+        <section id="doacoes" class="tab-content">
+            <h2>Doações</h2>
+            <p>Ajude nosso projeto com sua contribuição.</p>
+        </section>
+
+        <section id="razao" class="tab-content">
+            <h2>Razão Social</h2>
+            <p>Informações institucionais da organização.</p>
+        </section>
+
+        <section id="inscricao" class="tab-content">
+            <h2>Inscrição de Pets</h2>
+            <button id="addPetBtn">Cadastrar Pet</button>
+        </section>
+
+        <section id="adocoes" class="tab-content">
+            <h2>Pets para Adoção</h2>
+            <div id="petList">
+                <div class="pet-card">
+                    <h3>Pandora</h3>
+                    <p><strong>Fêmea, 4 meses</strong></p>
+                    <p><strong>Abrigo:</strong> ONG Anjos de Patas</p>
+                    <ul>
+                        <li><small>Aceita crianças</small></li>
+                        <li><small>Não aceita outros animais</small></li>
+                        <li><small>É tranquila</small></li>
+                        <li><small>Necessita telar a casa/apartamento</small></li>
+                    </ul>
+                    <button>Adotar Pandora</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="petModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Pet</h2>
+            <form id="petForm">
+                <label>Nome do Pet:</label>
+                <input type="text" id="petName" required>
+
+                <label>Idade:</label>
+                <input type="text" id="petAge" required>
+
+                <label>Raça:</label>
+                <input type="text" id="petBreed" placeholder="Sem raça definida">
+
+                <label>Vacinado:</label>
+                <select id="petVaccinated" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <label>Temperamento:</label>
+                <select id="petTemperament" required>
+                    <option>Calmo</option>
+                    <option>Brincalhão</option>
+                    <option>Agressivo</option>
+                    <option>Protetor</option>
+                </select>
+
+                <label>Observações:</label>
+                <textarea id="petNotes"></textarea>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
