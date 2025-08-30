@@ -1,13 +1,13 @@
 /* Estilos Gerais para um Visual Moderno */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     line-height: 1.6;
-    color: #333; /* Cor de texto padrão */
-    background-color: #f8f9fa; /* Fundo mais claro */
-    display: flex; /* Para centralizar o conteúdo */
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ocupa a altura total da tela */
+    min-height: 100vh;
 }
 
 /* Fundo com Imagem de Dono e Pet */
@@ -18,23 +18,23 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Ajuste o caminho da sua imagem aqui */
-    background-image: url('../img/funC:\Users\giane\OneDrive\Desktop\aurorap\programacaointernetn279\desafios\aurorapet\css\megan-dujardin-nc_kZlHMM98-unsplash.jpgdo-pet.jpg'); /* Caminho para a imagem */
-    background-size: cover; /* Cobre todo o fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Imagem fica fixa ao rolar */
-    filter: brightness(0.6) grayscale(0.2); /* Escurece e dessatura um pouco a imagem */
-    z-index: -1; /* Fica por trás de todo o conteúdo */
+    /* AQUI ESTÁ A MUDANÇA: O caminho relativo para a imagem */
+    background-image: url('../img/megan-dujardin-nc_kZlHMM98-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.6) grayscale(0.2);
+    z-index: -1;
 }
 
 /* Cabeçalho */
 header {
-    background-color: rgba(0, 119, 255, 0.9); /* Azul transparente */
+    background-color: rgba(0, 119, 255, 0.9);
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    position: sticky; /* Fica fixo no topo ao rolar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -43,7 +43,7 @@ header h1 {
     margin: 0;
     font-size: 2.5em;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra no título */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Navegação */
@@ -53,40 +53,40 @@ nav ul {
     margin: 15px 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 25px; /* Espaço entre os itens do menu */
+    gap: 25px;
 }
 
 nav ul li {
     padding: 10px 20px;
     cursor: pointer;
     color: white;
-    font-weight: 600; /* Mais negrito */
-    transition: all 0.3s ease; /* Transição mais suave */
-    border-radius: 25px; /* Bordas arredondadas */
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 nav ul li:hover,
 nav ul li.active {
-    background-color: rgba(255, 255, 255, 0.3); /* Mais visível ao passar o mouse/ativo */
-    transform: translateY(-2px); /* Efeito de leve levantamento */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra ao ativar */
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Conteúdo Principal */
 main {
-    flex-grow: 1; /* Ocupa o espaço restante */
+    flex-grow: 1;
     padding: 40px 20px;
-    max-width: 900px; /* Largura máxima para o conteúdo */
-    margin: 30px auto; /* Centraliza o conteúdo */
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .tab-content {
     display: none;
-    animation: fadeIn 0.8s ease-out; /* Animação de fade-in */
+    animation: fadeIn 0.8s ease-out;
 }
 
 .tab-content.active {
@@ -100,8 +100,8 @@ main {
 
 /* Títulos das Seções */
 h2 {
-    color: #0056b3; /* Azul mais escuro */
-    border-bottom: 2px solid #007bff; /* Linha de destaque */
+    color: #0056b3;
+    border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-bottom: 25px;
     text-align: center;
@@ -115,7 +115,7 @@ p {
 
 /* Botões */
 button {
-    background-color: #28a745; /* Botão de ação verde */
+    background-color: #28a745;
     color: white;
     font-weight: bold;
     border: none;
@@ -123,9 +123,9 @@ button {
     padding: 12px 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: auto; /* Ajusta a largura ao conteúdo */
+    width: auto;
     margin-top: 20px;
-    display: block; /* Para centralizar se necessário */
+    display: block;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.1em;
@@ -140,12 +140,171 @@ button:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1001; /* Acima de tudo */
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* Fundo mais escuro */
-    display: flex; /* Para centralizar o modal */
-    align-items: center
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    transform: scale(0.95);
+    animation: modalOpen 0.3s ease-out forwards;
+}
+
+@keyframes modalOpen {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Formulários */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Estilos para o card de pet */
+#petList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card h3 {
+    color: #007bff;
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
+
+.pet-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.pet-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pet-card ul li {
+    background-color: #e0f2f7;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.pet-card button {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.pet-card button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+    }
+
+    #petList {
+        grid-template-columns: 1fr;
+    }
 }
