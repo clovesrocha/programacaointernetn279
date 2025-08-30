@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora Pet</title>
     <link rel="stylesheet" href="../css/layout.css">
+    <script src="../js/esqueleto.js"></script>
 </head>
 <body>
     <header>
@@ -12,12 +13,9 @@
         <nav>
             <ul>
                 <li data-tab="home" class="active">Home</li>
-                <li data-tab="entrar">Entrar</li>
-                <li data-tab="sobre">Sobre</li>
-                <li data-tab="doacoes">Doações</li>
-                <li data-tab="razao">Razão Social</li>
-                <li data-tab="inscricao">Inscrição de Pets</li>
+                <li data-tab="cadastro">Cadastro</li>
                 <li data-tab="adocoes">Adoções</li>
+                <li data-tab="sobre">Sobre</li>
             </ul>
         </nav>
     </header>
@@ -28,33 +26,16 @@
             <p>Conectando lares e corações aos pets que precisam de amor ❤️</p>
         </section>
 
-        <section id="entrar" class="tab-content">
-            <h2>Entrar</h2>
-            <p>Área de login em breve.</p>
-        </section>
-
-        <section id="sobre" class="tab-content">
-            <h2>Sobre</h2>
-            <p>O Aurora Pet é um projeto dedicado a facilitar a adoção responsável de animais.</p>
-            <p>Nossa missão é conectar pets necessitados com lares amorosos e permanentes. Acreditamos que cada animal merece uma segunda chance e uma família que o valorize.</p>
-            <h3>Benefícios da Adoção</h3>
-            <p>A adoção de um pet pode trazer grandes benefícios à saúde mental. Um estudo do Human-Animal Bond Research Institute (HABRI) mostrou que 74% dos tutores de animais relataram melhorias em sua saúde mental após a adoção[cite: 1, 2, 3]. A interação com um pet pode ajudar a reduzir o estresse e a ansiedade, além de diminuir a solidão[cite: 1, 2, 3].</p>
-            <p>Além disso, o termo "adoção" também pode se referir à adoção de uma criança, o que, embora positivo, pode apresentar desafios à saúde mental dos pais. No entanto, a adoção de animais não deve ser vista como uma cura única para a depressão, mas sim como um complemento valioso ao tratamento médico e psicológico.</p>
-        </section>
-
-        <section id="doacoes" class="tab-content">
-            <h2>Doações</h2>
-            <p>Ajude nosso projeto com sua contribuição.</p>
-        </section>
-
-        <section id="razao" class="tab-content">
-            <h2>Razão Social</h2>
-            <p>Informações institucionais da organização.</p>
-        </section>
-
-        <section id="inscricao" class="tab-content">
-            <h2>Inscrição de Pets</h2>
-            <button id="addPetBtn">Cadastrar Pet</button>
+        <section id="cadastro" class="tab-content">
+            <h2>Cadastro</h2>
+            <p>Selecione uma opção de cadastro:</p>
+            <div class="cadastro-opcoes">
+                <h3>Cadastro para Adotar</h3>
+                <p>Preencha nosso formulário para encontrar o pet ideal para você.</p>
+                <h3>Inscrição de Pets</h3>
+                <p>Ajude um pet a encontrar um lar, faça a inscrição dele aqui.</p>
+                <button id="addPetBtn">Cadastrar Pet</button>
+            </div>
         </section>
 
         <section id="adocoes" class="tab-content">
@@ -73,6 +54,14 @@
                     <button>Adotar Pandora</button>
                 </div>
             </div>
+        </section>
+
+        <section id="sobre" class="tab-content">
+            <h2>Sobre</h2>
+            <p>O Aurora Pet é um projeto dedicado a facilitar a adoção responsável de animais.</p>
+            <p>Nossa missão é conectar pets necessitados com lares amorosos e permanentes. Acreditamos que cada animal merece uma segunda chance e uma família que o valorize.</p>
+            <h3>Doações</h3>
+            <p>Ajude nosso projeto com sua contribuição.</p>
         </section>
     </main>
 
@@ -111,7 +100,5 @@
             </form>
         </div>
     </div>
-
-    <script src="../js/esqueleto.js"></script>
 </body>
 </html>

@@ -10,22 +10,22 @@ body {
     min-height: 100vh;
 }
 
-/* Fundo com Imagem de Dono e Pet */
-body::before {
+/* Deletar o código da imagem aqui! */
+/* body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* AQUI ESTÁ A MUDANÇA: O caminho relativo para a imagem */
     background-image: url('../img/megan-dujardin-nc_kZlHMM98-unsplash.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     filter: brightness(0.6) grayscale(0.2);
     z-index: -1;
-}
+} */
+
 
 /* Cabeçalho */
 header {
@@ -146,7 +146,6 @@ button:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
-    display: flex;
     align-items: center;
     justify-content: center;
 }
