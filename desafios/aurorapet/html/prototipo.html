@@ -82,4 +82,36 @@
             <h2>Cadastrar Pet</h2>
             <form id="petForm">
                 <label>Nome do Pet:</label>
-                <input
+                <input type="text" id="petName" required>
+
+                <label>Idade:</label>
+                <input type="text" id="petAge" required>
+
+                <label>Raça:</label>
+                <input type="text" id="petBreed" placeholder="Sem raça definida">
+
+                <label>Vacinado:</label>
+                <select id="petVaccinated" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <label>Temperamento:</label>
+                <select id="petTemperament" required>
+                    <option>Calmo</option>
+                    <option>Brincalhão</option>
+                    <option>Agressivo</option>
+                    <option>Protetor</option>
+                </select>
+
+                <label>Observações:</label>
+                <textarea id="petNotes"></textarea>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/esqueleto.js"></script>
+</body>
+</html>
