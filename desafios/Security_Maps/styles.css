@@ -1,0 +1,590 @@
+/* RESET & FONTES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LAYOUT BASE PARA TODAS AS PÁGINAS */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0; /* Cor de fallback */
+}
+
+/* PÁGINA DE LOGIN ESPECÍFICA */
+body {
+  background: url('maps24.png') no-repeat center center/cover;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PÁGINA INICIAL ESPECÍFICA */
+.pagina-inicio {
+  background: url('maps24.png') no-repeat center center/cover;
+}
+
+/* PÁGINA SOBRE ESPECÍFICA */
+.pagina-sobre {
+  background: url('maps25.png') no-repeat center center/cover;
+}
+
+/* PÁGINA DE CONTATO */
+.pagina-contato {
+  background: url('maps25.png') no-repeat center center/cover;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CAIXA DE FORMULÁRIO */
+.form-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* CABEÇALHO DO FORMULÁRIO */
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-header h2 {
+  color: #fff;
+  font-size: 28px;
+}
+
+.form-icon {
+  width: 80px;
+  margin-top: 15px;
+}
+
+/* GRUPOS DE INPUT */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.input-group label {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  color: #ccc;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  cursor: pointer;
+}
+
+/* BOTÕES E LINKS */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.options a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+.form-footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* CABEÇALHO DA PÁGINA INICIAL */
+.pagina-inicio header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 5%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav a.active {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #4CAF50;
+}
+
+.btn-logout {
+  color: #ff4d4d !important;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  flex: 1;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* SEÇÃO DE RECURSOS */
+.centralizar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px 50px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card i {
+  font-size: 40px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* ÍCONES DO MENU */
+nav ul li a i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+/* PÁGINA SOBRE */
+.sobre-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sobre-titulo {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.sobre-titulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4CAF50;
+  margin: 10px auto;
+}
+
+.frases-lista {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.frase-item {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.frase-item::before {
+  content: "=";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.frase-item:last-child {
+  margin-bottom: 0;
+}
+
+/* RODAPÉ */
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ccc;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  /* Ajustes gerais */
+  body {
+    background-attachment: fixed;
+  }
+  
+  /* Página de Login/Cadastro */
+  .container {
+    padding: 10px;
+    max-width: 95%;
+    margin: 20px auto;
+  }
+  
+  .form-box {
+    padding: 20px;
+  }
+  
+  .form-header h2 {
+    font-size: 24px;
+  }
+  
+  .form-icon {
+    width: 60px;
+  }
+  
+  .input-group input {
+    padding: 12px 12px 12px 40px;
+    font-size: 14px;
+  }
+  
+  .input-icon {
+    font-size: 16px;
+    left: 12px;
+  }
+  
+  /* Página Inicial */
+  .pagina-inicio header {
+    padding: 15px;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .nav-menu.active {
+    display: block;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .welcome-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .welcome-content p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Página Sobre */
+  .pagina-sobre {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas pequenas */
+  .form-box {
+    padding: 15px;
+  }
+  
+  .options {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .options label {
+    margin-bottom: 5px;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 10px;
+  }
+  
+  .welcome-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .sobre-container {
+    padding: 15px;
+  }
+  
+  .sobre-titulo {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========== GERAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('maps24.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.contato-wrapper {
+  max-width: 700px;
+  width: 100%;
+}
+
+.contato-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contato-box {
+  background: rgba(0, 0, 0, 0.4); /* transparência suave */
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.contato-box p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 600px) {
+  .contato-titulo {
+    font-size: 1.5rem;
+  }
+
+  .contato-box p {
+    font-size: 1rem;
+  }
+}
