@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50">
+  <title>Security Maps - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- CAIXA DE LOGIN -->
+    <div class="form-box login">
+      <div class="form-header">
+        <h2>Login</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="Ícone de login" class="form-icon">
+      </div>
+      
+      <form action="inicio.html" method="GET">
+        <!-- CAIXA DE EMAIL -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" placeholder=" " required>
+          <label>Email</label>
+        </div>
+        
+        <!-- CAIXA DE SENHA -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" placeholder=" " required>
+          <label>Senha</label>
+          <img src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Olho" class="toggle-password" onclick="togglePassword()">
+        </div>
+        
+        <div class="options">
+          <label><input type="checkbox"> Lembrar-me</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+        
+        <button type="submit" class="btn">Entrar <i class="fas fa-arrow-right"></i></button>
+        
+        <div class="form-footer">
+          <p>Não tem uma conta? <a href="#" id="show-register">Registrar-se</a></p>
+        </div>
+      </form>
+    </div>
+    
+    <!-- CAIXA DE CADASTRO -->
+    <div class="form-box register" style="display: none;">
+      <div class="form-header">
+        <h2>Cadastro</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/1000/1000997.png" alt="Ícone de cadastro" class="form-icon">
+      </div>
+      
+      <form action="inicio.html" method="GET">
+        <!-- CAIXA DE NOME -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <input type="text" placeholder=" " required>
+          <label>Nome completo</label>
+        </div>
+        
+        <!-- CAIXA DE EMAIL -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input type="email" placeholder=" " required>
+          <label>Email</label>
+        </div>
+        
+        <!-- CAIXA DE SENHA -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" placeholder=" " required>
+          <label>Senha</label>
+        </div>
+        
+        <!-- CAIXA DE CONFIRMAR SENHA -->
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input type="password" placeholder=" " required>
+          <label>Confirmar senha</label>
+        </div>
+        
+        <div class="options">
+          <label><input type="checkbox" required> Aceito os termos</label>
+        </div>
+        
+        <button type="submit" class="btn">Cadastrar <i class="fas fa-check"></i></button>
+        
+        <div class="form-footer">
+          <p>Já tem uma conta? <a href="#" id="show-login">Fazer login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
