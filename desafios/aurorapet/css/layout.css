@@ -1,138 +1,151 @@
+/* Estilos Gerais para um Visual Moderno */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
     margin: 0;
-    background-color: #f4faff;
+    line-height: 1.6;
+    color: #333; /* Cor de texto padrão */
+    background-color: #f8f9fa; /* Fundo mais claro */
+    display: flex; /* Para centralizar o conteúdo */
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa a altura total da tela */
 }
 
+/* Fundo com Imagem de Dono e Pet */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajuste o caminho da sua imagem aqui */
+    background-image: url('../img/funC:\Users\giane\OneDrive\Desktop\aurorap\programacaointernetn279\desafios\aurorapet\css\megan-dujardin-nc_kZlHMM98-unsplash.jpgdo-pet.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Cobre todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Imagem fica fixa ao rolar */
+    filter: brightness(0.6) grayscale(0.2); /* Escurece e dessatura um pouco a imagem */
+    z-index: -1; /* Fica por trás de todo o conteúdo */
+}
+
+/* Cabeçalho */
 header {
-    background-color: #0077ff;
+    background-color: rgba(0, 119, 255, 0.9); /* Azul transparente */
     color: white;
-    padding: 15px;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    position: sticky; /* Fica fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra no título */
+}
+
+/* Navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 15px 0 0 0;
     display: flex;
     justify-content: center;
-    background-color: #005ed4;
+    gap: 25px; /* Espaço entre os itens do menu */
 }
 
 nav ul li {
     padding: 10px 20px;
     cursor: pointer;
     color: white;
-    transition: background 0.3s;
+    font-weight: 600; /* Mais negrito */
+    transition: all 0.3s ease; /* Transição mais suave */
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil */
 }
 
 nav ul li:hover,
 nav ul li.active {
-    background-color: #004bb0;
+    background-color: rgba(255, 255, 255, 0.3); /* Mais visível ao passar o mouse/ativo */
+    transform: translateY(-2px); /* Efeito de leve levantamento */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra ao ativar */
 }
 
+/* Conteúdo Principal */
 main {
-    padding: 20px;
+    flex-grow: 1; /* Ocupa o espaço restante */
+    padding: 40px 20px;
+    max-width: 900px; /* Largura máxima para o conteúdo */
+    margin: 30px auto; /* Centraliza o conteúdo */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .tab-content {
     display: none;
+    animation: fadeIn 0.8s ease-out; /* Animação de fade-in */
 }
 
 .tab-content.active {
     display: block;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos das Seções */
+h2 {
+    color: #0056b3; /* Azul mais escuro */
+    border-bottom: 2px solid #007bff; /* Linha de destaque */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Parágrafos e texto geral */
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Botões */
+button {
+    background-color: #28a745; /* Botão de ação verde */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto; /* Ajusta a largura ao conteúdo */
+    margin-top: 20px;
+    display: block; /* Para centralizar se necessário */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
 /* Modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001; /* Acima de tudo */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0px 0px 10px #000;
-}
-
-.close {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-input, select, textarea, button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-button {
-    background-color: #0077ff;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #005ed4;
-}
-
-/* Estilos para o card de pet */
-.pet-card {
-    background: white;
-    border-radius: 8px;
-    padding: 10px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 5px #ccc;
-    text-align: center;
-}
-
-.pet-card h3 {
-    margin: 0 0 5px 0;
-}
-
-.pet-card ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.pet-card ul li {
-    background-color: #e6f0ff;
-    color: #004bb0;
-    padding: 4px 8px;
-    border-radius: 12px;
-    display: inline-block;
-    margin: 4px 4px 4px 0;
-    font-size: 0.8em;
-}
-
-.pet-card button {
-    background-color: #ff9900;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.pet-card button:hover {
-    background-color: #e68a00;
+    background-color: rgba(0,0,0,0.7); /* Fundo mais escuro */
+    display: flex; /* Para centralizar o modal */
+    align-items: center
 }
