@@ -4,34 +4,36 @@ body {
     margin: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Este será visível se a imagem não carregar */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Deletar o código da imagem aqui! */
-/* body::before {
+/* --- Plano de Fundo com Imagem --- */
+body::before {
     content: '';
-    position: fixed;
+    position: fixed; /* Fixa a imagem no fundo, mesmo ao rolar */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/megan-dujardin-nc_kZlHMM98-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    filter: brightness(0.6) grayscale(0.2);
-    z-index: -1;
-} */
+    /* Substitua 'fundo.jpg' pelo nome da sua imagem na pasta 'img' */
+    background-image: url('../img/fundo.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto o conteúdo rola */
+    filter: brightness(0.6) blur(3px) grayscale(0.2); /* Escurece, desfoca e tira um pouco da cor */
+    z-index: -1; /* Coloca a imagem atrás de todo o conteúdo */
+}
+/* --- Fim do Plano de Fundo --- */
 
 
 /* Cabeçalho */
 header {
     background-color: rgba(0, 119, 255, 0.9);
     color: white;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -96,6 +98,48 @@ main {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para as imagens dentro do card da home */
+.tab-content#home {
+    position: relative; /* Essencial para posicionar as imagens */
+    overflow: hidden; /* Garante que nada saia do card */
+    padding-bottom: 300px; /* Aumenta o espaço na parte inferior do card para as imagens */
+}
+
+.card-images {
+    position: absolute; /* Permite posicionar livremente as imagens */
+    bottom: 0; /* Coloca as imagens na parte inferior do card */
+    left: 0;
+    width: 100%;
+    height: 1x; /* Altura do contêiner das imagens */
+    display: flex; /* Para alinhar as imagens lado a lado */
+    justify-content: space-between; /* Espaça as imagens para as pontas */
+    align-items: flex-end; /* Alinha as imagens na parte de baixo do seu contêiner */
+    pointer-events: none; /* Impede que clique nas imagens afete o card */
+}
+
+.card-img-left,
+.card-img-right {
+    height: 200px; /* Tamanho das imagens do gato e cachorro. Ajuste este valor se quiser maiores/menores */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    opacity: 0.8;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.card-img-left {
+    transform: translateX(-15px); /* Empurra a imagem do gato um pouco para a esquerda */
+}
+
+.card-img-right {
+    transform: translateX(15px); /* Empurra a imagem do cachorro um pouco para a direita */
+}
+
+.card-img-left:hover,
+.card-img-right:hover {
+    transform: translateY(-5px); /* Efeito ao passar o mouse */
+    opacity: 1;
 }
 
 /* Títulos das Seções */
