@@ -9,3 +9,5 @@
 - Brener Santana Magalhães 
 - Edson Guilherme
 - Fellipe José
+- Gabriel Felipe
+- Maickon Henrique
