@@ -12,3 +12,4 @@
 - Gabriel Felipe
 - Maickon Henrique
 - Leonardo Coelho;
+- João Victor;
