@@ -6,3 +6,4 @@
 - Bruno Alexsandro;
 - Vinicius Taiguara N. Santos;
 - Giovanne Henrique Araujo de Lima;
+- Brener Santana Magalhães 
