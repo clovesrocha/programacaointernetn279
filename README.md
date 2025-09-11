@@ -4,3 +4,4 @@
 - Discentes: ...
 - Aughusto José;
 - Bruno Alexsandro;
+- Vinicius Taiguara N. Santos;
