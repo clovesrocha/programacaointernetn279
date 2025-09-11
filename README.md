@@ -5,3 +5,4 @@
 - Aughusto José;
 - Bruno Alexsandro;
 - Vinicius Taiguara N. Santos;
+- Lucas Rivail Araújo;
