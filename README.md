@@ -13,3 +13,4 @@
 - Maickon Henrique
 - Leonardo Coelho;
 - João Victor;
+- Paulo Vitor;
